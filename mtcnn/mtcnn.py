@@ -185,7 +185,8 @@ class MTCNN(object):
         self.__scale_factor = scale_factor
 
         config = tf.ConfigProto(log_device_placement=False)
-        config.gpu_options.allow_growth = True
+        config.gpu_options.visible_device_list= ''
+        #config.gpu_options.allow_growth = True
 
         self.__graph = tf.Graph()
 
